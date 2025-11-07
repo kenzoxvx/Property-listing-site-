@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RealEstate Connect - Where buyers meet realtors</title>
+  <link rel="stylesheet" href="styles/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+  }
+  
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    position: relative;
+    z-index: 1;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 2rem;
+    animation: slideDown 0.8s ease;
+  }
+  
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.5));
+  }
+  
+  .logo img {
+    transition: all 0.3s ease;
+  }
+  
+  .logo:hover img {
+    filter: brightness(1.2);
+  }
+  
+  .logo span {
+    color: #ffd700;
+  }
+  
+  /* Hamburger menu styles */
+  .hamburger {
+    display: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+    width: 30px;
+    height: 24px;
+    position: relative;
+    z-index: 100;
+  }
+  
+  .hamburger-line {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  nav {
+    transition: all 0.5s ease;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  nav ul li {
+    margin-left: 2rem;
+    position: relative;
+  }
+  
+  nav ul li::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #ffd700, #ff6b6b);
+    transition: width 0.3s ease;
+  }
+  
+  nav ul li:hover::after {
+    width: 100%;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+  }
+  
+  nav ul li a:hover {
+    color: #ffd700;
+    transform: translateY(-2px);
+  }
+  
+  /* Responsive navigation */
+  @media (max-width: 768px) {
+    .hamburger {
+      display: block;
+    }
+    
+    nav {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 70%;
+      height: 100vh;
+      background: linear-gradient(135deg, rgba(102, 126, 234, 0.95), rgba(118, 75, 162, 0.95));
+      backdrop-filter: blur(20px);
+      box-shadow: -5px 0 30px rgba(0, 0, 0, 0.3);
+      padding-top: 80px;
+      transition: all 0.5s ease;
+      z-index: 99;
+    }
+    
+    nav.active {
+      right: 0;
+    }
+    
+    nav ul {
+      flex-direction: column;
+      padding: 0 30px;
+    }
+    
+    nav ul li {
+      margin: 15px 0;
+      animation: slideInRight 0.5s ease forwards;
+      opacity: 0;
+    }
+    
+    nav.active ul li {
+      animation: slideInRight 0.5s ease forwards;
+    }
+    
+    nav.active ul li:nth-child(1) { animation-delay: 0.1s; }
+    nav.active ul li:nth-child(2) { animation-delay: 0.2s; }
+    nav.active ul li:nth-child(3) { animation-delay: 0.3s; }
+    
+    @keyframes slideInRight {
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      from {
+        opacity: 0;
+        transform: translateX(50px);
+      }
+    }
+    
+    /* Hamburger animation */
+    .hamburger.active .hamburger-line:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+    
+    .hamburger.active .hamburger-line:nth-child(2) {
+      opacity: 0;
+    }
+    
+    .hamburger.active .hamburger-line:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+    
+    /* Overlay */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.7);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.5s ease;
+      z-index: 98;
+      backdrop-filter: blur(5px);
+    }
+    
+    .overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 0;
+    gap: 2rem;
+  }
+  
+  .hero-content {
+    flex: 1;
+  }
+  
+  .hero-content h1 {
+    font-size: 3.5rem;
+    color: white;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 1s ease;
+    background: linear-gradient(45deg, #fff, #ffd700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 2rem;
+    line-height: 1.8;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    animation: fadeInUp 1s ease 0.2s backwards;
+  }
+  
+  .signup-cards {
+    display: flex;
+    gap: 2rem;
+    margin-top: 3rem;
+    animation: fadeInUp 1s ease 0.4s backwards;
+  }
+  
+  .card {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: 25px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    padding: 2.5rem;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .card::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+    transform: scale(0);
+    transition: transform 0.8s ease;
+  }
+  
+  .card:hover::after {
+    transform: scale(1);
+  }
+  
+  .card:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+  }
+  
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    z-index: -1;
+    transition: all 0.5s ease;
+  }
+  
+  .buyer-card::before {
+    background: linear-gradient(90deg, #667eea, #764ba2);
+  }
+  
+  .realtor-card::before {
+    background: linear-gradient(90deg, #f093fb, #f5576c);
+  }
+  
+  .card:hover::before {
+    height: 100%;
+    opacity: 0.1;
+  }
+  
+  .card h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .card p {
+    color: #555;
+    margin-bottom: 2rem;
+    line-height: 1.8;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .card-icon {
+    margin-bottom: 1.5rem;
+    font-size: 3rem;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+    animation: iconFloat 3s ease-in-out infinite;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  @keyframes iconFloat {
+    0%, 100% {
+      transform: translateY(0) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-10px) rotate(5deg);
+    }
+  }
+  
+  .buyer-card .card-icon {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+  }
+  
+  .realtor-card .card-icon {
+    background: linear-gradient(135deg, #f093fb, #f5576c);
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  .btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+  }
+  
+  .btn:hover::before {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .btn:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  }
+  
+  .btn-primary {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+  }
+  
+  .btn-secondary {
+    background: linear-gradient(135deg, #f093fb, #f5576c);
+  }
+  
+  .hero-image {
+    flex: 1;
+    position: relative;
+    animation: floatImage 6s ease-in-out infinite;
+  }
+  
+  @keyframes floatImage {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  .hero-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 25px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+  }
+  
+  .features {
+    padding: 5rem 0;
+    text-align: center;
+    position: relative;
+  }
+  
+  .features::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    z-index: -1;
+  }
+  
+  .features h2 {
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 3rem;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 1s ease;
+    background: linear-gradient(45deg, #fff, #ffd700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+  }
+  
+  .feature-item {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    padding: 2.5rem;
+    border-radius: 25px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    opacity: 0;
+    transform: translateY(50px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .feature-item::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+    transform: rotate(45deg);
+    transition: all 0.8s ease;
+  }
+  
+  .feature-item:hover::before {
+    left: 100%;
+  }
+  
+  .feature-item:hover {
+    transform: translateY(-15px) scale(1.03);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);
+  }
+  
+  .feature-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: iconPulse 2s ease-in-out infinite;
+  }
+  
+  @keyframes iconPulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+  }
+  
+  .feature-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+  }
+  
+  .feature-item p {
+    color: #555;
+    line-height: 1.8;
+    font-size: 1.05rem;
+  }
+  
+  footer {
+    background: linear-gradient(135deg, rgba(44, 62, 80, 0.95), rgba(52, 73, 94, 0.95));
+    backdrop-filter: blur(20px);
+    color: white;
+    padding: 3rem 0;
+    text-align: center;
+    margin-top: 5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.3);
+  }
+  
+  .footer-content {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .footer-content p {
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    font-size: 1.05rem;
+  }
+  
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.3), rgba(118, 75, 162, 0.3));
+    backdrop-filter: blur(10px);
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    font-size: 1.3rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .social-links a:hover {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    transform: translateY(-10px) rotate(360deg);
+    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.5);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .hero {
+      flex-direction: column;
+    }
+    
+    .signup-cards {
+      flex-direction: column;
+    }
+    
+    .hero-content h1 {
+      font-size: 2.5rem;
+    }
+    
+    .features h2 {
+      font-size: 2rem;
+    }
+    
+    .container {
+      padding: 1rem;
+    }
+  }
+  
+  /* Scroll animations */
+  @keyframes fadeInScale {
+    from {
+      opacity: 0;
+      transform: translateY(50px) scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+  
+  .hero-content, .card, .feature-item {
+    animation: fadeInScale 1s ease forwards;
+  }
+  
+  .hero-content {
+    animation-delay: 0.2s;
+  }
+  
+  .buyer-card {
+    animation-delay: 0.4s;
+  }
+  
+  .realtor-card {
+    animation-delay: 0.6s;
+  }
+  
+  .feature-item:nth-child(1) {
+    animation-delay: 0.8s;
+  }
+  
+  .feature-item:nth-child(2) {
+    animation-delay: 1s;
+  }
+  
+  .feature-item:nth-child(3) {
+    animation-delay: 1.2s;
+  }
+  
+  /* Floating particles effect */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0) translateX(0);
+    }
+    33% {
+      transform: translateY(-20px) translateX(10px);
+    }
+    66% {
+      transform: translateY(-10px) translateX(-10px);
+    }
+  }
+  
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Selection color */
+  ::selection {
+    background: rgba(255, 215, 0, 0.3);
+    color: white;
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #764ba2, #f093fb);
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a href="#" class="logo"><img src="img/KENZOHOMES.png" alt="" style="width: 120px; heigth: 120px;"></a>
+      
+      <button class="hamburger">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+      
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      
+      <div class="overlay"></div>
+    </header>
+    
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <h1>Find Your Dream Home or Perfect Client</h1>
+        <p>Connect with the right people in the real estate market. Whether you're looking to buy a property or you're a realtor looking for clients, we've got you covered.</p>
+        
+        <div class="signup-cards">
+          <div class="card buyer-card">
+            <div class="card-icon">
+              <i class="fas fa-home"></i>
+            </div>
+            <h2>Property Buyer</h2>
+            <p>Looking for your dream home? Sign up as a buyer to connect with top realtors in your area and get personalized property recommendations.</p>
+            <a href="buyersregistration.php" class="btn btn-primary">Buyer Sign Up</a>
+          </div>
+          
+          <div class="card realtor-card">
+            <div class="card-icon">
+              <i class="fas fa-key"></i>
+            </div>
+            <h2>Realtor</h2>
+            <p>Are you a real estate professional? Sign up as a realtor to showcase your listings and connect with potential buyers who match your properties.</p>
+            <a href="realtorregistration.php" class="btn btn-secondary">Realtor Sign Up</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="features" id="about">
+      <h2>Why Choose RealEstateConnect</h2>
+      <div class="feature-grid">
+        <div class="feature-item">
+          <div class="feature-icon">
+            <i class="fas fa-search"></i>
+          </div>
+          <h3>Smart Matching</h3>
+          <p>Our advanced algorithm matches buyers with properties and realtors that perfectly fit their needs and preferences.</p>
+        </div>
+        
+        <div class="feature-item">
+          <div class="feature-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3>Secure Platform</h3>
+          <p>Your data is protected with enterprise-grade security. Communicate and share information with peace of mind.</p>
+        </div>
+        
+        <div class="feature-item">
+          <div class="feature-icon">
+            <i class="fas fa-star"></i>
+          </div>
+          <h3>Verified Listings</h3>
+          <p>All properties and realtors on our platform are verified to ensure you only deal with legitimate opportunities.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+  <footer id="contact">
+    <div class="footer-content">
+      <p>© 2025 RealEstateConnect. All rights reserved.</p>
+      <p>Connect with us on social media</p>
+      <p>Contact number: 08068785827.</p>
+      <div class="social-links">
+        
+        <a href="https://twitter.com/kenzodv" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/kenzo_dvv" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@kenzodv" target="_blank"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Hamburger menu functionality
+      const hamburger = document.querySelector('.hamburger');
+      const nav = document.querySelector('nav');
+      const overlay = document.querySelector('.overlay');
+      const navLinks = document.querySelectorAll('nav ul li a');
+      
+      function toggleMenu() {
+        hamburger.classList.toggle('active');
+        nav.classList.toggle('active');
+        overlay.classList.toggle('active');
+        document.body.classList.toggle('no-scroll');
+      }
+      
+      hamburger.addEventListener('click', toggleMenu);
+      overlay.addEventListener('click', toggleMenu);
+      
+      // Close menu when clicking on nav links
+      navLinks.forEach(link => {
+        link.addEventListener('click', toggleMenu);
+      });
+      
+      // Add hover effect to buttons
+      const buttons = document.querySelectorAll('.btn');
+      
+      buttons.forEach(button => {
+        button.addEventListener('mouseenter', function() {
+          this.style.transform = 'scale(1.05)';
+        });
+        
+        button.addEventListener('mouseleave', function() {
+          this.style.transform = 'scale(1)';
+        });
+      });
+      
+      // Add scroll animation
+      const animateOnScroll = function() {
+        const elements = document.querySelectorAll('.feature-item');
+        
+        elements.forEach(element => {
+          const position = element.getBoundingClientRect().top;
+          const screenPosition = window.innerHeight / 1.3;
+          
+          if (position < screenPosition) {
+            element.style.opacity = 1;
+            element.style.transform = 'translateY(0)';
+          }
+        });
+      };
+      
+      window.addEventListener('scroll', animateOnScroll);
+      
+      // Initialize animation
+      animateOnScroll();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,450 @@
+[08-Apr-2025 12:14:11 Europe/Berlin] PHP Notice:  Undefined variable: tmpName in C:\xampp\htdocs\Propertylist\uploadproperty.php on line 82
+[08-Apr-2025 12:34:41 Europe/Berlin] Files received: Array
+(
+)
+
+[08-Apr-2025 12:35:03 Europe/Berlin] Files received: Array
+(
+)
+
+[08-Apr-2025 12:35:24 Europe/Berlin] Files received: Array
+(
+)
+
+[08-Apr-2025 12:35:37 Europe/Berlin] Files received: Array
+(
+)
+
+[08-Apr-2025 12:38:37 Europe/Berlin] Files received: Array
+(
+    [images] => Array
+        (
+            [name] => Array
+                (
+                    [0] => Authentication - Google Chrome 2_8_2025 9_44_39 AM.png
+                    [1] => Authentication - Google Chrome 2_8_2025 9_45_43 AM.png
+                    [2] => Authentication - Google Chrome 2_8_2025 9_45_55 AM.png
+                    [3] => Authentication - Google Chrome 2_8_2025 9_46_27 AM.png
+                    [4] => Authentication - Google Chrome 2_8_2025 9_47_45 AM.png
+                    [5] => Authentication - Google Chrome 2_8_2025 9_47_58 AM.png
+                )
+
+            [type] => Array
+                (
+                    [0] => image/png
+                    [1] => image/png
+                    [2] => image/png
+                    [3] => image/png
+                    [4] => image/png
+                    [5] => image/png
+                )
+
+            [tmp_name] => Array
+                (
+                    [0] => C:\xampp\tmp\php64BA.tmp
+                    [1] => C:\xampp\tmp\php64BB.tmp
+                    [2] => C:\xampp\tmp\php64CC.tmp
+                    [3] => C:\xampp\tmp\php64CD.tmp
+                    [4] => C:\xampp\tmp\php64CE.tmp
+                    [5] => C:\xampp\tmp\php64CF.tmp
+                )
+
+            [error] => Array
+                (
+                    [0] => 0
+                    [1] => 0
+                    [2] => 0
+                    [3] => 0
+                    [4] => 0
+                    [5] => 0
+                )
+
+            [size] => Array
+                (
+                    [0] => 50255
+                    [1] => 73592
+                    [2] => 94272
+                    [3] => 60744
+                    [4] => 75404
+                    [5] => 72384
+                )
+
+        )
+
+)
+
+[08-Apr-2025 12:38:37 Europe/Berlin] PHP Notice:  Undefined variable: tmpName in C:\xampp\htdocs\Propertylist\uploadproperty.php on line 91
+[08-Apr-2025 12:39:04 Europe/Berlin] Files received: Array
+(
+    [images] => Array
+        (
+            [name] => Array
+                (
+                    [0] => Authentication - Google Chrome 2_8_2025 9_44_39 AM.png
+                    [1] => Authentication - Google Chrome 2_8_2025 9_45_43 AM.png
+                    [2] => Authentication - Google Chrome 2_8_2025 9_45_55 AM.png
+                    [3] => Authentication - Google Chrome 2_8_2025 9_46_27 AM.png
+                    [4] => Authentication - Google Chrome 2_8_2025 9_47_45 AM.png
+                    [5] => Authentication - Google Chrome 2_8_2025 9_47_58 AM.png
+                )
+
+            [type] => Array
+                (
+                    [0] => image/png
+                    [1] => image/png
+                    [2] => image/png
+                    [3] => image/png
+                    [4] => image/png
+                    [5] => image/png
+                )
+
+            [tmp_name] => Array
+                (
+                    [0] => C:\xampp\tmp\phpD01D.tmp
+                    [1] => C:\xampp\tmp\phpD01E.tmp
+                    [2] => C:\xampp\tmp\phpD01F.tmp
+                    [3] => C:\xampp\tmp\phpD02F.tmp
+                    [4] => C:\xampp\tmp\phpD030.tmp
+                    [5] => C:\xampp\tmp\phpD031.tmp
+                )
+
+            [error] => Array
+                (
+                    [0] => 0
+                    [1] => 0
+                    [2] => 0
+                    [3] => 0
+                    [4] => 0
+                    [5] => 0
+                )
+
+            [size] => Array
+                (
+                    [0] => 50255
+                    [1] => 73592
+                    [2] => 94272
+                    [3] => 60744
+                    [4] => 75404
+                    [5] => 72384
+                )
+
+        )
+
+)
+
+[08-Apr-2025 12:39:04 Europe/Berlin] PHP Notice:  Undefined variable: tmpName in C:\xampp\htdocs\Propertylist\uploadproperty.php on line 90
+[08-Apr-2025 12:45:13 Europe/Berlin] Files received: Array
+(
+    [images] => Array
+        (
+            [name] => Array
+                (
+                    [0] => Authentication - Google Chrome 2_8_2025 9_44_39 AM.png
+                    [1] => Authentication - Google Chrome 2_8_2025 9_45_43 AM.png
+                    [2] => Authentication - Google Chrome 2_8_2025 9_45_55 AM.png
+                    [3] => Authentication - Google Chrome 2_8_2025 9_46_27 AM.png
+                )
+
+            [type] => Array
+                (
+                    [0] => image/png
+                    [1] => image/png
+                    [2] => image/png
+                    [3] => image/png
+                )
+
+            [tmp_name] => Array
+                (
+                    [0] => C:\xampp\tmp\php6FC6.tmp
+                    [1] => C:\xampp\tmp\php6FD6.tmp
+                    [2] => C:\xampp\tmp\php6FD7.tmp
+                    [3] => C:\xampp\tmp\php6FD8.tmp
+                )
+
+            [error] => Array
+                (
+                    [0] => 0
+                    [1] => 0
+                    [2] => 0
+                    [3] => 0
+                )
+
+            [size] => Array
+                (
+                    [0] => 50255
+                    [1] => 73592
+                    [2] => 94272
+                    [3] => 60744
+                )
+
+        )
+
+)
+
+[08-Apr-2025 12:45:13 Europe/Berlin] PHP Notice:  Undefined variable: tmpName in C:\xampp\htdocs\Propertylist\uploadproperty.php on line 103
+[08-Apr-2025 12:45:13 Europe/Berlin] PHP Warning:  finfo_file(): Empty filename or path in C:\xampp\htdocs\Propertylist\uploadproperty.php on line 103
+[08-Apr-2025 12:50:14 Europe/Berlin] Files received: Array
+(
+    [images] => Array
+        (
+            [name] => Array
+                (
+                    [0] => Authentication - Google Chrome 2_8_2025 9_44_39 AM.png
+                    [1] => Authentication - Google Chrome 2_8_2025 9_45_43 AM.png
+                )
+
+            [type] => Array
+                (
+                    [0] => image/png
+                    [1] => image/png
+                )
+
+            [tmp_name] => Array
+                (
+                    [0] => C:\xampp\tmp\php9A5.tmp
+                    [1] => C:\xampp\tmp\php9B6.tmp
+                )
+
+            [error] => Array
+                (
+                    [0] => 0
+                    [1] => 0
+                )
+
+            [size] => Array
+                (
+                    [0] => 50255
+                    [1] => 73592
+                )
+
+        )
+
+)
+
+[08-Apr-2025 12:50:15 Europe/Berlin] PHP Notice:  Undefined variable: tmpName in C:\xampp\htdocs\Propertylist\uploadproperty.php on line 103
+[08-Apr-2025 12:50:15 Europe/Berlin] PHP Warning:  finfo_file(): Empty filename or path in C:\xampp\htdocs\Propertylist\uploadproperty.php on line 103
+[08-Apr-2025 12:50:40 Europe/Berlin] Files received: Array
+(
+    [images] => Array
+        (
+            [name] => Array
+                (
+                    [0] => house6.jpg
+                    [1] => dataflowvhub.png
+                    [2] => realtor.png
+                )
+
+            [type] => Array
+                (
+                    [0] => image/jpeg
+                    [1] => image/png
+                    [2] => image/png
+                )
+
+            [tmp_name] => Array
+                (
+                    [0] => C:\xampp\tmp\php6B7E.tmp
+                    [1] => C:\xampp\tmp\php6B8E.tmp
+                    [2] => C:\xampp\tmp\php6B9F.tmp
+                )
+
+            [error] => Array
+                (
+                    [0] => 0
+                    [1] => 0
+                    [2] => 0
+                )
+
+            [size] => Array
+                (
+                    [0] => 2846070
+                    [1] => 909792
+                    [2] => 103406
+                )
+
+        )
+
+)
+
+[08-Apr-2025 12:50:40 Europe/Berlin] PHP Notice:  Undefined variable: tmpName in C:\xampp\htdocs\Propertylist\uploadproperty.php on line 103
+[08-Apr-2025 12:50:40 Europe/Berlin] PHP Warning:  finfo_file(): Empty filename or path in C:\xampp\htdocs\Propertylist\uploadproperty.php on line 103
+[08-Apr-2025 12:51:20 Europe/Berlin] Files received: Array
+(
+    [images] => Array
+        (
+            [name] => Array
+                (
+                    [0] => house6.jpg
+                    [1] => dataflowvhub.png
+                    [2] => realtor.png
+                )
+
+            [type] => Array
+                (
+                    [0] => image/jpeg
+                    [1] => image/png
+                    [2] => image/png
+                )
+
+            [tmp_name] => Array
+                (
+                    [0] => C:\xampp\tmp\php8CA.tmp
+                    [1] => C:\xampp\tmp\php8DB.tmp
+                    [2] => C:\xampp\tmp\php8DC.tmp
+                )
+
+            [error] => Array
+                (
+                    [0] => 0
+                    [1] => 0
+                    [2] => 0
+                )
+
+            [size] => Array
+                (
+                    [0] => 2846070
+                    [1] => 909792
+                    [2] => 103406
+                )
+
+        )
+
+)
+
+[08-Apr-2025 12:51:20 Europe/Berlin] PHP Notice:  Undefined variable: tmpName in C:\xampp\htdocs\Propertylist\uploadproperty.php on line 103
+[08-Apr-2025 12:51:20 Europe/Berlin] PHP Warning:  finfo_file(): Empty filename or path in C:\xampp\htdocs\Propertylist\uploadproperty.php on line 103
+[08-Apr-2025 12:51:28 Europe/Berlin] PHP Notice:  Undefined variable: tmpName in C:\xampp\htdocs\Propertylist\uploadproperty.php on line 103
+[08-Apr-2025 12:51:28 Europe/Berlin] PHP Warning:  finfo_file(): Empty filename or path in C:\xampp\htdocs\Propertylist\uploadproperty.php on line 103
+[08-Apr-2025 12:51:38 Europe/Berlin] PHP Notice:  Undefined variable: tmpName in C:\xampp\htdocs\Propertylist\uploadproperty.php on line 103
+[08-Apr-2025 12:51:38 Europe/Berlin] PHP Warning:  finfo_file(): Empty filename or path in C:\xampp\htdocs\Propertylist\uploadproperty.php on line 103
+[08-Apr-2025 12:51:41 Europe/Berlin] Property upload error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'createdAt' in 'field list'
+[08-Apr-2025 13:17:33 Europe/Berlin] Files received: Array
+(
+    [images] => Array
+        (
+            [name] => Array
+                (
+                    [0] => house6.jpg
+                    [1] => dataflowvhub.png
+                    [2] => realtor.png
+                )
+
+            [type] => Array
+                (
+                    [0] => image/jpeg
+                    [1] => image/png
+                    [2] => image/png
+                )
+
+            [tmp_name] => Array
+                (
+                    [0] => C:\xampp\tmp\phpA21.tmp
+                    [1] => C:\xampp\tmp\phpA31.tmp
+                    [2] => C:\xampp\tmp\phpA32.tmp
+                )
+
+            [error] => Array
+                (
+                    [0] => 0
+                    [1] => 0
+                    [2] => 0
+                )
+
+            [size] => Array
+                (
+                    [0] => 2846070
+                    [1] => 909792
+                    [2] => 103406
+                )
+
+        )
+
+)
+
+[08-Apr-2025 13:20:04 Europe/Berlin] Files received: Array
+(
+    [images] => Array
+        (
+            [name] => Array
+                (
+                    [0] => house6.jpg
+                    [1] => dataflowvhub.png
+                    [2] => realtor.png
+                )
+
+            [type] => Array
+                (
+                    [0] => image/jpeg
+                    [1] => image/png
+                    [2] => image/png
+                )
+
+            [tmp_name] => Array
+                (
+                    [0] => C:\xampp\tmp\php584A.tmp
+                    [1] => C:\xampp\tmp\php585A.tmp
+                    [2] => C:\xampp\tmp\php586B.tmp
+                )
+
+            [error] => Array
+                (
+                    [0] => 0
+                    [1] => 0
+                    [2] => 0
+                )
+
+            [size] => Array
+                (
+                    [0] => 2846070
+                    [1] => 909792
+                    [2] => 103406
+                )
+
+        )
+
+)
+
+[08-Apr-2025 13:20:25 Europe/Berlin] Property upload error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'created_at' in 'field list'
+[24-Aug-2025 13:13:38 Europe/Berlin] Exception: Unable to read any of the environment file(s) at [C:\xampp\htdocs\Propertylist\.env].
+[24-Aug-2025 13:13:42 Europe/Berlin] Exception: Unable to read any of the environment file(s) at [C:\xampp\htdocs\Propertylist\.env].
+[24-Aug-2025 13:22:08 Europe/Berlin] Exception: Unable to read any of the environment file(s) at [C:\xampp\htdocs\Propertylist\.env].
+[24-Aug-2025 13:32:30 Europe/Berlin] Cloudinary initialization error: Unable to read any of the environment file(s) at [C:\xampp\htdocs\Propertylist\.env].
+[24-Aug-2025 13:43:00 Europe/Berlin] Cloudinary configuration error: .env file not found
+[24-Aug-2025 20:22:26 Europe/Berlin] Cloudinary upload error: cURL error 6: Could not resolve host: api.cloudinary.com (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://api.cloudinary.com/v1_1/djrdzebht/image/upload
+[24-Aug-2025 20:22:26 Europe/Berlin] Cloudinary upload error: cURL error 6: Could not resolve host: api.cloudinary.com (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://api.cloudinary.com/v1_1/djrdzebht/image/upload
+[24-Aug-2025 20:22:26 Europe/Berlin] Cloudinary upload error: cURL error 6: Could not resolve host: api.cloudinary.com (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://api.cloudinary.com/v1_1/djrdzebht/image/upload
+[24-Aug-2025 20:22:26 Europe/Berlin] Cloudinary upload error: cURL error 6: Could not resolve host: api.cloudinary.com (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://api.cloudinary.com/v1_1/djrdzebht/image/upload
+[24-Aug-2025 20:22:26 Europe/Berlin] Cloudinary upload error: cURL error 6: Could not resolve host: api.cloudinary.com (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://api.cloudinary.com/v1_1/djrdzebht/image/upload
+[24-Aug-2025 20:22:26 Europe/Berlin] Cloudinary upload error: cURL error 6: Could not resolve host: api.cloudinary.com (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://api.cloudinary.com/v1_1/djrdzebht/image/upload
+[24-Aug-2025 20:23:06 Europe/Berlin] Cloudinary upload error: cURL error 6: Could not resolve host: api.cloudinary.com (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://api.cloudinary.com/v1_1/djrdzebht/image/upload
+[24-Aug-2025 20:23:06 Europe/Berlin] Cloudinary upload error: cURL error 6: Could not resolve host: api.cloudinary.com (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://api.cloudinary.com/v1_1/djrdzebht/image/upload
+[24-Aug-2025 20:23:06 Europe/Berlin] Cloudinary upload error: cURL error 6: Could not resolve host: api.cloudinary.com (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://api.cloudinary.com/v1_1/djrdzebht/image/upload
+[24-Aug-2025 20:23:06 Europe/Berlin] Cloudinary upload error: cURL error 6: Could not resolve host: api.cloudinary.com (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://api.cloudinary.com/v1_1/djrdzebht/image/upload
+[24-Aug-2025 20:23:06 Europe/Berlin] Cloudinary upload error: cURL error 6: Could not resolve host: api.cloudinary.com (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://api.cloudinary.com/v1_1/djrdzebht/image/upload
+[24-Aug-2025 20:23:06 Europe/Berlin] Cloudinary upload error: cURL error 6: Could not resolve host: api.cloudinary.com (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://api.cloudinary.com/v1_1/djrdzebht/image/upload
+[24-Aug-2025 20:23:07 Europe/Berlin] Cloudinary upload error: cURL error 6: Could not resolve host: api.cloudinary.com (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://api.cloudinary.com/v1_1/djrdzebht/image/upload
+[24-Aug-2025 20:23:07 Europe/Berlin] Cloudinary upload error: cURL error 6: Could not resolve host: api.cloudinary.com (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://api.cloudinary.com/v1_1/djrdzebht/image/upload
+[24-Aug-2025 20:23:07 Europe/Berlin] Cloudinary upload error: cURL error 6: Could not resolve host: api.cloudinary.com (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://api.cloudinary.com/v1_1/djrdzebht/image/upload
+[24-Aug-2025 20:23:07 Europe/Berlin] Cloudinary upload error: cURL error 6: Could not resolve host: api.cloudinary.com (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://api.cloudinary.com/v1_1/djrdzebht/image/upload
+[24-Aug-2025 20:23:07 Europe/Berlin] Cloudinary upload error: cURL error 6: Could not resolve host: api.cloudinary.com (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://api.cloudinary.com/v1_1/djrdzebht/image/upload
+[24-Aug-2025 20:23:07 Europe/Berlin] Cloudinary upload error: cURL error 6: Could not resolve host: api.cloudinary.com (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://api.cloudinary.com/v1_1/djrdzebht/image/upload
+[24-Aug-2025 20:25:23 Europe/Berlin] Cloudinary upload error: cURL error 6: Could not resolve host: api.cloudinary.com (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://api.cloudinary.com/v1_1/djrdzebht/image/upload
+[24-Aug-2025 20:25:23 Europe/Berlin] Cloudinary upload error: cURL error 6: Could not resolve host: api.cloudinary.com (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://api.cloudinary.com/v1_1/djrdzebht/image/upload
+[24-Aug-2025 20:25:23 Europe/Berlin] Cloudinary upload error: cURL error 6: Could not resolve host: api.cloudinary.com (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://api.cloudinary.com/v1_1/djrdzebht/image/upload
+[24-Aug-2025 20:25:23 Europe/Berlin] Cloudinary upload error: cURL error 6: Could not resolve host: api.cloudinary.com (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://api.cloudinary.com/v1_1/djrdzebht/image/upload
+[24-Aug-2025 20:25:23 Europe/Berlin] Cloudinary upload error: cURL error 6: Could not resolve host: api.cloudinary.com (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://api.cloudinary.com/v1_1/djrdzebht/image/upload
+[24-Aug-2025 20:25:23 Europe/Berlin] Cloudinary upload error: cURL error 6: Could not resolve host: api.cloudinary.com (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://api.cloudinary.com/v1_1/djrdzebht/image/upload
+[24-Aug-2025 20:28:27 Europe/Berlin] Cloudinary upload error: cURL error 6: Could not resolve host: api.cloudinary.com (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://api.cloudinary.com/v1_1/djrdzebht/image/upload
+[24-Aug-2025 20:28:27 Europe/Berlin] Cloudinary upload error: cURL error 6: Could not resolve host: api.cloudinary.com (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://api.cloudinary.com/v1_1/djrdzebht/image/upload
+[24-Aug-2025 20:28:27 Europe/Berlin] Cloudinary upload error: cURL error 6: Could not resolve host: api.cloudinary.com (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://api.cloudinary.com/v1_1/djrdzebht/image/upload
+[24-Aug-2025 20:28:27 Europe/Berlin] Cloudinary upload error: cURL error 6: Could not resolve host: api.cloudinary.com (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://api.cloudinary.com/v1_1/djrdzebht/image/upload
+[24-Aug-2025 20:28:27 Europe/Berlin] Cloudinary upload error: cURL error 6: Could not resolve host: api.cloudinary.com (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://api.cloudinary.com/v1_1/djrdzebht/image/upload
+[24-Aug-2025 20:28:27 Europe/Berlin] Cloudinary upload error: cURL error 6: Could not resolve host: api.cloudinary.com (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://api.cloudinary.com/v1_1/djrdzebht/image/upload
+[24-Aug-2025 20:31:33 Europe/Berlin] Cloudinary upload error: cURL error 6: Could not resolve host: api.cloudinary.com (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://api.cloudinary.com/v1_1/djrdzebht/image/upload
+[24-Aug-2025 20:31:33 Europe/Berlin] Cloudinary upload error: cURL error 6: Could not resolve host: api.cloudinary.com (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://api.cloudinary.com/v1_1/djrdzebht/image/upload
+[24-Aug-2025 20:31:33 Europe/Berlin] Cloudinary upload error: cURL error 6: Could not resolve host: api.cloudinary.com (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://api.cloudinary.com/v1_1/djrdzebht/image/upload
+[24-Aug-2025 20:31:33 Europe/Berlin] Cloudinary upload error: cURL error 6: Could not resolve host: api.cloudinary.com (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://api.cloudinary.com/v1_1/djrdzebht/image/upload
+[24-Aug-2025 20:31:33 Europe/Berlin] Cloudinary upload error: cURL error 6: Could not resolve host: api.cloudinary.com (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://api.cloudinary.com/v1_1/djrdzebht/image/upload
+[24-Aug-2025 20:31:33 Europe/Berlin] Cloudinary upload error: cURL error 6: Could not resolve host: api.cloudinary.com (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://api.cloudinary.com/v1_1/djrdzebht/image/upload
+[20-Sep-2025 12:33:59 Europe/Berlin] Cloudinary upload error: cURL error 6: Could not resolve host: api.cloudinary.com (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://api.cloudinary.com/v1_1/djrdzebht/image/upload
+[20-Sep-2025 12:33:59 Europe/Berlin] Cloudinary upload error: cURL error 6: Could not resolve host: api.cloudinary.com (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://api.cloudinary.com/v1_1/djrdzebht/image/upload

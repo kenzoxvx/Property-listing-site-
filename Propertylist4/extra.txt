@@ -1,0 +1,137 @@
+<div class="form-group">
+                                <label>Property Images</label>
+                                <div class="file-upload" id="file-upload-area">
+                                    <div class="file-upload-icon">📷</div>
+                                    <div class="file-upload-text">Click to select images or drag and drop</div>
+                                    <div class="file-upload-info">Upload up to 10 images (Max size: 5MB each)</div>
+                                    <input type="file" id="property-images" accept="image/*" multiple name="images[]">
+                                </div>
+                                <div class="image-preview-container" id="image-preview"></div>
+                            </div>
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-outline" onclick="resetForm()">Reset</button>
+                                <button type="submit" class="btn btn-primary" name="addproperty">Add Property</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- View Properties Tab remains the same -->
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // --- Image Upload Improvements ---
+            const imageInput = document.getElementById('property-images');
+            const previewContainer = document.getElementById('image-preview');
+            const fileUploadArea = document.getElementById('file-upload-area');
+
+            // Make the entire upload area clickable to trigger file input
+            fileUploadArea.addEventListener('click', function(e) {
+                // Only trigger if not clicking on a button or the remove image button
+                if (e.target.tagName !== 'BUTTON' && !e.target.closest('.remove-image')) {
+                    imageInput.click();
+                }
+            });
+
+            // Handle file selection
+            imageInput.addEventListener('change', function(e) {
+                handleFiles(this.files);
+            });
+
+            // Improved drag and drop handling
+            fileUploadArea.addEventListener('dragover', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                this.classList.add('dragover');
+            });
+
+            fileUploadArea.addEventListener('dragleave', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                this.classList.remove('dragover');
+            });
+
+            fileUploadArea.addEventListener('drop', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                this.classList.remove('dragover');
+                
+                if (e.dataTransfer.files.length) {
+                    handleFiles(e.dataTransfer.files);
+                }
+            });
+
+            // Function to handle the selected files
+            function handleFiles(files) {
+                previewContainer.innerHTML = '';
+                const maxFiles = 10;
+                const maxSize = 5 * 1024 * 1024; // 5MB
+
+                if (files.length > maxFiles) {
+                    alert(`You can only upload up to ${maxFiles} images.`);
+                    imageInput.value = '';
+                    return;
+                }
+
+                // Process each file
+                for (let i = 0; i < files.length; i++) {
+                    const file = files[i];
+                    
+                    // Check file size
+                    if (file.size > maxSize) {
+                        alert(`File "${file.name}" is too large (max 5MB).`);
+                        continue;
+                    }
+                    
+                    // Check if it's an image
+                    if (!file.type.match('image.*')) {
+                        alert(`File "${file.name}" is not an image.`);
+                        continue;
+                    }
+
+                    // Create preview
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        const previewDiv = document.createElement('div');
+                        previewDiv.className = 'image-preview';
+                        
+                        const img = document.createElement('img');
+                        img.src = e.target.result;
+                        
+                        const removeBtn = document.createElement('button');
+                        removeBtn.className = 'remove-image';
+                        removeBtn.innerHTML = '×';
+                        removeBtn.onclick = function(e) {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            previewDiv.remove();
+                            
+                            // Create a new FileList without the removed file
+                            const dataTransfer = new DataTransfer();
+                            const currentFiles = imageInput.files;
+                            
+                            for (let j = 0; j < currentFiles.length; j++) {
+                                if (j !== i) {
+                                    dataTransfer.items.add(currentFiles[j]);
+                                }
+                            }
+                            
+                            imageInput.files = dataTransfer.files;
+                        };
+                        
+                        previewDiv.appendChild(img);
+                        previewDiv.appendChild(removeBtn);
+                        previewContainer.appendChild(previewDiv);
+                    };
+                    reader.readAsDataURL(file);
+                }
+            }
+
+            // The rest of your JavaScript remains the same
+        });
+    </script>
+</body>
+</html>
